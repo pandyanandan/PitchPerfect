@@ -28,13 +28,24 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MgX-KR-VeL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cs-bV-thi">
+                                <rect key="frame" x="154" y="381" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3cs-bV-thi" firstAttribute="centerX" secondItem="kGi-t2-5Iv" secondAttribute="centerX" id="4IL-9T-TKa"/>
                             <constraint firstItem="kGi-t2-5Iv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TFg-yf-kuL"/>
+                            <constraint firstItem="3cs-bV-thi" firstAttribute="top" secondItem="kGi-t2-5Iv" secondAttribute="bottom" constant="-2" id="X27-Rp-aG9"/>
                             <constraint firstItem="kGi-t2-5Iv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="diU-oP-dbJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingLable" destination="3cs-bV-thi" id="u3Q-Xw-y8S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
