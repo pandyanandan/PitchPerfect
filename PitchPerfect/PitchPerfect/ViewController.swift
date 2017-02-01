@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
     @IBAction func recordAudio(_ sender: Any) {
         print("Record Button Precessed!");
-        if recordingLable.text == "Tap to Record" {
+        if recordingLable.text == "Tap To Record" {
             recordingLable.text = "Recording";
         }
         else{
