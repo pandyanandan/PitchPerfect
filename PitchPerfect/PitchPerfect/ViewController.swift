@@ -11,9 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var recordingLable: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        stopButton.isEnabled = false;
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,13 +26,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func recordAudio(_ sender: Any) {
-        print("Record Button Precessed!");
-        if recordingLable.text == "Tap To Record" {
-            recordingLable.text = "Recording";
-        }
-        else{
-            recordingLable.text = "Tap to Record";
-        }
+        print("Start Button Precessed!");
+        recordingLable.text = "Recording..."
+        stopButton.isEnabled = true;
+        startButton.isEnabled = false;
+    }
+    
+    @IBAction func stopRecording(_ sender: Any) {
+        print("Stop Button Precessed!");
+        recordingLable.text = "Tap to Record"
+        stopButton.isEnabled = false;
+        startButton.isEnabled = true;
     }
 
 }

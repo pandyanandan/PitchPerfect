@@ -34,10 +34,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZH-zp-X2E">
+                                <rect key="frame" x="130" y="473" width="155" height="155"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zwx-P9-d6n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3cs-bV-thi" firstAttribute="centerX" secondItem="kGi-t2-5Iv" secondAttribute="centerX" id="4IL-9T-TKa"/>
+                            <constraint firstItem="9ZH-zp-X2E" firstAttribute="centerX" secondItem="3cs-bV-thi" secondAttribute="centerX" id="KtF-UT-OrR"/>
+                            <constraint firstItem="9ZH-zp-X2E" firstAttribute="top" secondItem="3cs-bV-thi" secondAttribute="bottom" constant="8" id="Sak-bR-Frz"/>
                             <constraint firstItem="kGi-t2-5Iv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TFg-yf-kuL"/>
                             <constraint firstItem="3cs-bV-thi" firstAttribute="top" secondItem="kGi-t2-5Iv" secondAttribute="bottom" constant="-2" id="X27-Rp-aG9"/>
                             <constraint firstItem="kGi-t2-5Iv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="diU-oP-dbJ"/>
@@ -45,6 +54,8 @@
                     </view>
                     <connections>
                         <outlet property="recordingLable" destination="3cs-bV-thi" id="u3Q-Xw-y8S"/>
+                        <outlet property="startButton" destination="kGi-t2-5Iv" id="qla-IQ-fDn"/>
+                        <outlet property="stopButton" destination="9ZH-zp-X2E" id="zwv-xO-tB4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,5 +65,6 @@
     </scenes>
     <resources>
         <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
     </resources>
 </document>
