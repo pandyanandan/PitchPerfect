@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController {
+class RecordSoundsViewController: UIViewController ,AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordingLable: UILabel!
     @IBOutlet weak var startButton: UIButton!
@@ -38,6 +38,7 @@ class RecordSoundsViewController: UIViewController {
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
+        audioRecorder.delegate = self
         recordingLable.text = "Recording..."
         stopButton.isEnabled = true
         startButton.isEnabled = false
@@ -52,6 +53,10 @@ class RecordSoundsViewController: UIViewController {
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
+    }
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        print("Finished Recording !")
     }
 
 }
