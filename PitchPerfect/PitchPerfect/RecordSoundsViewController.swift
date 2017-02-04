@@ -30,8 +30,8 @@ class RecordSoundsViewController: UIViewController {
     @IBAction func recordAudio(_ sender: Any) {
         print("Start Button Precessed!");
         recordingLable.text = "Recording..."
-        stopButton.isEnabled = true;
-        startButton.isEnabled = false;
+        stopButton.isEnabled = true
+        startButton.isEnabled = false
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
@@ -47,10 +47,13 @@ class RecordSoundsViewController: UIViewController {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
-        print("Stop Button Precessed!");
+        print("Stop Button Precessed!")
         recordingLable.text = "Tap to Record"
-        stopButton.isEnabled = false;
-        startButton.isEnabled = true;
+        stopButton.isEnabled = false
+        startButton.isEnabled = true
+        audioRecorder.stop()
+        let audioSession = AVAudioSession.sharedInstance()
+        try! audioSession.setActive(false)
     }
 
 }
