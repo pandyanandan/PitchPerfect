@@ -13,6 +13,7 @@
 		6C08C32A1E4267A700060CDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C08C3291E4267A700060CDF /* Assets.xcassets */; };
 		6C08C32D1E4267A700060CDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C08C32B1E4267A700060CDF /* LaunchScreen.storyboard */; };
 		6C2558751E4774D200A73B06 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2558741E4774D200A73B06 /* PlaySoundsViewController+Audio.swift */; };
+		6C2558791E47807000A73B06 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2558781E47807000A73B06 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		6C6FABBD1E4650E90003F872 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6FABBC1E4650E90003F872 /* PlaySoundsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,8 @@
 		6C08C32C1E4267A700060CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C08C32E1E4267A700060CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C2558741E4774D200A73B06 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
+		6C2558761E47807000A73B06 /* PitchPerfect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PitchPerfect.entitlements; sourceTree = "<group>"; };
+		6C2558781E47807000A73B06 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6C6FABBC1E4650E90003F872 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2558791E47807000A73B06 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +48,7 @@
 			children = (
 				6C08C3211E4267A700060CDF /* PitchPerfect */,
 				6C08C3201E4267A700060CDF /* Products */,
+				6C2558771E47807000A73B06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +63,7 @@
 		6C08C3211E4267A700060CDF /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				6C2558761E47807000A73B06 /* PitchPerfect.entitlements */,
 				6C08C3221E4267A700060CDF /* AppDelegate.swift */,
 				6C08C3241E4267A700060CDF /* RecordSoundsViewController.swift */,
 				6C08C3261E4267A700060CDF /* Main.storyboard */,
@@ -68,6 +74,14 @@
 				6C2558741E4774D200A73B06 /* PlaySoundsViewController+Audio.swift */,
 			);
 			path = PitchPerfect;
+			sourceTree = "<group>";
+		};
+		6C2558771E47807000A73B06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C2558781E47807000A73B06 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +116,19 @@
 				TargetAttributes = {
 					6C08C31E1E4267A700060CDF = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = C5H2C97848;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -268,6 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PitchPerfect/PitchPerfect.entitlements;
+				DEVELOPMENT_TEAM = C5H2C97848;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nkp.PitchPerfect;
@@ -280,6 +308,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PitchPerfect/PitchPerfect.entitlements;
+				DEVELOPMENT_TEAM = C5H2C97848;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nkp.PitchPerfect;
