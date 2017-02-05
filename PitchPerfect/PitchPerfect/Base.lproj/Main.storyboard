@@ -152,6 +152,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aRT-eP-Qsu" firstAttribute="leading" secondItem="FDc-Vd-JxV" secondAttribute="leadingMargin" id="6cg-yc-RXz"/>
                             <constraint firstItem="aRT-eP-Qsu" firstAttribute="top" secondItem="Th5-pQ-gCR" secondAttribute="bottom" id="cEO-NU-T0G"/>
