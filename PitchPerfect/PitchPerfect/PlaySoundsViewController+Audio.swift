@@ -13,7 +13,6 @@ import AVFoundation
 extension PlaySoundsViewController: AVAudioPlayerDelegate {
     
     // MARK: Alerts
-    
     struct Alerts {
         static let DismissAlert = "Dismiss"
         static let RecordingDisabledTitle = "Recording Disabled"
@@ -26,7 +25,6 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         static let AudioFileError = "Audio File Error"
         static let AudioEngineError = "Audio Engine Error"
     }
-    
     // MARK: PlayingState (raw values correspond to sender tags)
     
     enum PlayingState { case playing, notPlaying }
