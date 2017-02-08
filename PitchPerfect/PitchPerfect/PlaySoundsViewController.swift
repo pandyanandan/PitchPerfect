@@ -46,7 +46,6 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.notPlaying)
     }
 
-    
     @IBAction func playSoundForButton(_ sender: UIButton) {
         print("Play Sound Button Pressed")
         switch(ButtonType(rawValue: sender.tag)!) {
